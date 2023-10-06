@@ -17,7 +17,7 @@ function appendarray() {
   readarray -t -O "${#array[@]}" array
 }
 
-bashio::log.info 'Starting Tailscale up --auth-key...'
+bashio::log.info 'Starting Tailscale up --auth-key... v2'
 
 # Default options
 options+=(--accept-routes)
