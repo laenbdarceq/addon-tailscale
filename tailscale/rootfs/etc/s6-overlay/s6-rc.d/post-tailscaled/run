@@ -10,6 +10,7 @@ declare -a routes=()
 declare ipinfo
 declare login_server
 declare tags
+declare auth_key
 
 function appendarray() {
   local -n array=${1}
@@ -83,6 +84,12 @@ readarray -t routes < <(printf "%s\n" "${routes[@]}" | sort -u)
 IFS=","
 options+=(--advertise-routes="${routes[*]}")
 unset IFS
+
+if bashio::config.has_value "auth_key";
+then
+  auth_key=$(bashio::config "auth_key")
+  options+=(--auth-key "${auth_key}")
+fi
 
 # Wait for the network to be available and logged in
 while ! bashio::fs.socket_exists "/var/run/tailscale/tailscaled.sock" || \

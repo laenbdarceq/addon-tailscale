@@ -64,6 +64,7 @@ tags:
   - tag:homeassistant
 taildrop: true
 proxy: true
+auth_key: tskey-auth-xxx
 ```
 
 ### Option: `accept_dns`
@@ -177,6 +178,14 @@ More information: [Enabling HTTPS][tailscale_info_https]
 **Note:** _You should not use any port number in the URL that you used
 previously to access Home Assistant. Tailscale Proxy works on the default HTTPS
 port 443._
+
+### Option: `auth_key`
+
+This options allows to connect to the Tailscale account using a previously 
+generated authentication key intead of going through the regular authentication
+flow as described in Installation here above. 
+
+More information : <https://tailscale.com/kb/1085/auth-keys/>
 
 ## Changelog & Releases
 

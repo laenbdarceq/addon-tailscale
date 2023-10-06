@@ -41,3 +41,10 @@ configuration:
       This option allows you to enable Tailscale's Proxy feature to present your
       Home Assistant instance on your tailnet with a valid certificate.
       When not set, this option is enabled by default.
+  auth_key:
+    name: Tailscale Auth Key
+    description: >-
+      This options allows to connect to Tailscale using an Auth Key 
+      (see https://tailscale.com/kb/1085/auth-keys/) instead of going through the
+      regular authentication flow using the link to open in a browser.
+    
