@@ -103,4 +103,6 @@ do
   sleep 2
 done
 
+bashio::log.info "Tailscale options : \"${options[@]}\""
+
 /opt/tailscale up "${options[@]}"
