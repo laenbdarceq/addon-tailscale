@@ -92,7 +92,7 @@ bashio::log.notice "Running laenbdarceq tailscale addon"
 if bashio::config.has_value "auth_key";
 then
   auth_key=$(bashio::config "auth_key")
-  options+=(--auth_key="${auth_key}")
+  options+=(--auth_key "${auth_key}")
 fi
 
 # Wait for the network to be available and logged in
