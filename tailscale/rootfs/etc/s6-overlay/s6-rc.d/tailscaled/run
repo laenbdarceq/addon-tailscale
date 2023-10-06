@@ -6,7 +6,7 @@
 # ==============================================================================
 declare -a options
 
-bashio::log.info 'Starting Tailscale...'
+bashio::log.info 'Starting Tailscale with auth-key...'
 
 options+=(--state=/data/tailscaled.state)
 options+=(--statedir=/data/state)
