@@ -34,3 +34,4 @@ schema:
   tags: ["match(^tag:[a-zA-Z0-9]-?[a-zA-Z0-9]+$)?"]
   taildrop: bool?
   proxy: bool?
+  auth_key: str?
